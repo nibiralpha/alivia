@@ -1,0 +1,85 @@
+.logo {
+  font-size: 30px;
+}
+
+.menu_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line {
+  height: 2px;
+  width: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.menu .line {
+  margin-bottom: 10px;
+}
+
+.menu .line :last-child {
+  margin-bottom: 0;
+}
+
+.t_container {
+  /* display: flex; */
+  padding: 25px 25px 0 25px;
+}
+
+.about_text_container {
+  margin-top: 50px;
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+
+.about_text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #d6d6d6;
+}
+
+.left_side {
+  width: 125px;
+}
+
+.right_side {
+  text-align: right;
+  display: ruby;
+  width: 160px;
+  margin-right: 50px;
+}
+
+.alivia_text_container {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.alivia_text {
+  font-size: 11em;
+  line-height: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.alivia_text_container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: baseline;
+}
+
+.right_side_img{
+    margin-bottom: 10px;
+}
