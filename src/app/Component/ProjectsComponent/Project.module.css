@@ -1,0 +1,43 @@
+.gallary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.year {
+  width: 23%;
+  font-size: 4em;
+  margin-top: 120px;
+}
+
+.images {
+  width: 56%;
+}
+
+.explore {
+  text-align: right;
+  width: 23%;
+  margin-top: 160px;
+}
+
+.image {
+  margin-bottom: 25px;
+  /* justify-content: center;
+  display: flex; */
+}
+
+.img {
+  width: 100%;
+}
+
+.text {
+  text-align: right;
+}
+
+.button {
+}
+
+.project_detail {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
