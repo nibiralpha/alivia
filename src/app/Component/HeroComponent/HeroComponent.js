@@ -28,6 +28,7 @@ export default function HeroComponent() {
         <div className={styles.alivia_text}>Alivia</div>
         <div className={styles.alivia_right_text}>Daiana</div>
       </div>
+      
     </div>
   );
 }

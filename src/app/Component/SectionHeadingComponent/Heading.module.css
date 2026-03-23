@@ -1,0 +1,12 @@
+.heading{
+    width: 100%;
+    border: 1px solid #ffffff17;
+}
+
+.detail{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+

@@ -26,6 +26,7 @@
 .t_container {
   /* display: flex; */
   padding: 25px 25px 0 25px;
+  margin-bottom: 50%;
 }
 
 .about_text_container {
