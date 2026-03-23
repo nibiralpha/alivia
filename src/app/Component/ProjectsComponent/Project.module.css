@@ -1,3 +1,7 @@
+.project_component{
+    margin-bottom: 20%;
+}
+
 .gallary {
   display: flex;
   justify-content: space-between;
