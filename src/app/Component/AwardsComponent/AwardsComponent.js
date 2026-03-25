@@ -15,8 +15,8 @@ export default function AwardsComponent() {
     <div className={styles.awards_component}>
       <div className={styles.awards}>
         <div className={styles.images}>
-          <img src="/images/main_image.webp" />
           <img src="/images/Award_Image_1.avif" />
+          <img src="/images/main_image.webp" />
           <img src="/images/Award_Image_2.webp" />
           <img src="/images/Placeholder Image.webp" />
         </div>
