@@ -95,3 +95,25 @@
 .main_image{
   /* margin-right: 20px; */
 }
+
+.detals_section{
+  display: flex;
+  align-items: center;
+  margin-left: 25%;
+  margin-top: 10%;
+}
+
+.percentange{
+  font-size: 4.8em;
+  font-weight: 600;
+}
+
+.client{
+  color: #777;
+}
+
+.satisfied{}
+
+.detals{
+  margin-left: 20px;
+}

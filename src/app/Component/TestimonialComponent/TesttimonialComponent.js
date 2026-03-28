@@ -84,6 +84,14 @@ export default function TestimonialComponent() {
               </div> */}
             {/* </Slider> */}
           </div>
+
+          <div className={styles.detals_section}>
+            <div className={styles.percentange}>96%</div>
+            <div className={styles.detals}>
+              <div className={styles.satisfied}>13k+ Satisfied Clients</div>
+              <div className={styles.client}>Avg 4.9 rating</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
