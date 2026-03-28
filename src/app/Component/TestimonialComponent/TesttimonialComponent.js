@@ -94,6 +94,33 @@ export default function TestimonialComponent() {
           </div>
         </div>
       </div>
+      <div className={styles.box_area}>
+        <div className={styles.box}>
+          <div className={styles.logo}>
+            <img src={"/images/client_logo_1.png"} />
+          </div>
+        </div>
+        <div className={styles.box}>
+          <div className={styles.logo}>
+            <img src={"/images/client_logo_2.png"} />
+          </div>
+        </div>
+        <div className={styles.box}>
+          <div className={styles.logo}>
+            <img src={"/images/client_logo_3.png"} />
+          </div>
+        </div>
+        <div className={styles.box}>
+          <div className={styles.logo}>
+            <img src={"/images/client_logo_4.png"} />
+          </div>
+        </div>
+        <div className={styles.box}>
+          <div className={styles.logo}>
+            <img src={"/images/client_logo_5.png"} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
