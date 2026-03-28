@@ -3,17 +3,19 @@ import AboutComponent from "./Component/AboutComponent/AboutComponent.js";
 import ProjectComponent from "./Component/ProjectsComponent/ProjectComponent.js";
 import ExpertiseComponent from "./Component/ExpertiseComponent/ExpertiseComponent.js";
 import AwardsComponent from "./Component/AwardsComponent/AwardsComponent.js";
-import TestimonialComponent from "./Component/TestimonialComponent/TesttimonialComponent.js";
+import TesttimonialComponent from "./Component/TestimonialComponent/TesttimonialComponent.js";
+import MyJourneyComponent from "./Component/MyJourneyComponent/MyJourneyComponent.js";
 
 export default function Home() {
   return (
     <div className="bg">
       <HeroComponent />
-      <AboutComponent /> 
+      <AboutComponent />
       <ProjectComponent />
       <ExpertiseComponent />
       <AwardsComponent />
-      <TestimonialComponent />
+      <TesttimonialComponent />
+      <MyJourneyComponent />
     </div>
   );
 }
