@@ -5,7 +5,7 @@ import styles from "./Awards.module.css";
 
 export default function AwardsComponent() {
   useEffect(() => {
-    document.documentElement.style.overflowX = "hidden";
+    // document.documentElement.style.overflowX = "hidden";
 
     return () => {
       // document.documentElement.style.overflowX = 'auto';

@@ -1,5 +1,5 @@
-.testimonial_component{
-    padding-top: 20px;
+.testimonial_component {
+  padding-top: 20px;
 }
 
 .heading {
@@ -13,6 +13,85 @@
   padding-bottom: 100px;
 }
 
-.slide{
-    display: flex;
+.slide {
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.name{
+  margin-bottom: 8px;
+}
+
+.main_image {
+  width: 100%;
+}
+
+.name_area {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top {
+  color: #777;
+  font-size: 1.2em;
+}
+
+.position{
+   color: #777;
+}
+
+.details {
+  font-size: 1.8em;
+  width: 85%;
+  line-height: 1.3;
+  margin-top: 50px;
+}
+
+.contents {
+  margin-left: 70px;
+}
+
+.main_image {
+  object-fit: cover;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.button_container{
+  display: flex;
+}
+
+.button{
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 10px;
+}
+
+.button img{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-right: 20px;
+}
+
+.main_image{
+  /* margin-right: 20px; */
 }
