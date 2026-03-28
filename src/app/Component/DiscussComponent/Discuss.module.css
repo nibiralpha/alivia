@@ -1,0 +1,58 @@
+.discuss {
+  margin-top: 200px;
+  /* padding-bottom: 100px; */
+}
+
+.start_section {
+  text-align: center;
+}
+
+.title {
+  font-size: 7em;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.discuss_button {
+  padding: 20px 25px;
+  border-radius: 2px;
+  background-color: white;
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+}
+
+.button {
+  color: black;
+  font-weight: 500;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.images img {
+  width: 300px;
+  height: auto;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.left_img {
+  z-index: 1;
+  transform: rotate(-10deg) translateY(20px);
+  margin-right: -120px;
+}
+.center_img {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+.right_img {
+  z-index: 1;
+  transform: rotate(10deg) translateY(20px); 
+  margin-left: -120px; 
+}

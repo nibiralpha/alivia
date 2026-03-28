@@ -5,6 +5,7 @@ import ExpertiseComponent from "./Component/ExpertiseComponent/ExpertiseComponen
 import AwardsComponent from "./Component/AwardsComponent/AwardsComponent.js";
 import TesttimonialComponent from "./Component/TestimonialComponent/TesttimonialComponent.js";
 import MyJourneyComponent from "./Component/MyJourneyComponent/MyJourneyComponent.js";
+import DiscussComponent from "./Component/DiscussComponent/DiscussComponent.js";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <AwardsComponent />
       <TesttimonialComponent />
       <MyJourneyComponent />
+      <DiscussComponent />
     </div>
   );
 }
