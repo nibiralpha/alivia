@@ -52,3 +52,38 @@
 
 .status {
 } */
+
+/* MOBILE */
+
+@media screen and (max-width: 430px) {
+  .about_component {
+    padding: 30px 15px 0 15px;
+    margin-top: 0;
+  }
+
+  .heading {
+    margin-top: 40px;
+    font-size: 2em;
+    line-height: 30px;
+  }
+
+  .start {
+    flex-direction: column;
+  }
+
+  .left {
+    margin-right: 0;
+  }
+
+  .exp {
+    flex-direction: column;
+  }
+
+  .years{
+    margin-bottom: 40px;
+  }
+
+  .status{
+    margin-top: 40px;
+  }
+}

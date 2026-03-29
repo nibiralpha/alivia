@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <div className="bg">
       <HeroComponent />
-      {/* <AboutComponent />
-      <ProjectComponent />
+      <AboutComponent />
+      {/* <ProjectComponent />
       <ExpertiseComponent />
       <AwardsComponent />
       <TesttimonialComponent />

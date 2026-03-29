@@ -88,6 +88,10 @@
 /* MOBILE */
 
 @media screen and (max-width: 430px) {
+  .t_container{
+    height: 100%;
+  }
+  
   .about_text_container {
     display: none;
     text-align: center;
