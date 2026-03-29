@@ -6,6 +6,7 @@ import AwardsComponent from "./Component/AwardsComponent/AwardsComponent.js";
 import TesttimonialComponent from "./Component/TestimonialComponent/TesttimonialComponent.js";
 import MyJourneyComponent from "./Component/MyJourneyComponent/MyJourneyComponent.js";
 import DiscussComponent from "./Component/DiscussComponent/DiscussComponent.js";
+import FooterComponent from "./Component/FooterComponent/FooterComponent.js";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <TesttimonialComponent />
       <MyJourneyComponent />
       <DiscussComponent />
+      <FooterComponent />
     </div>
   );
 }

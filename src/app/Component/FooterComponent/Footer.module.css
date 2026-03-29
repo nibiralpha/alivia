@@ -1,0 +1,45 @@
+.footer {
+  width: 100vw;
+  margin: 0 -30px 20% -30px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 200px;
+  padding: 200px 45px 0 30px;
+  height: 125vh;
+  background: url("/images/Footer_Gradient_Bg.webp");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.year {
+}
+
+.copyright {
+}
+
+.main {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  line-height: 0;
+}
+
+.alivia {
+  font-size: 15em;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
