@@ -26,7 +26,13 @@ export default function AwardsComponent() {
         </div>
 
         <div className={styles.bottom_title}>
+          <div className={styles.mobile_sl}>/01</div>
           <div className={styles.title}>Fiona</div>
+        </div>
+
+        <div className={styles.moblie_details_bar}>
+          <div className={styles.mobile_year}>2024</div>
+          <div className={styles.mobile_texts}>Best Minimal Design</div>
         </div>
 
         <div className={styles.bottom_bar}>
