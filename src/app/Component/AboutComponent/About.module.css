@@ -79,11 +79,24 @@
     flex-direction: column;
   }
 
-  .years{
+  .years {
     margin-bottom: 40px;
   }
 
-  .status{
+  .status {
     margin-top: 40px;
+  }
+}
+
+/* TAB */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about_component {
+    margin-top: 35%;
+  }
+
+  .heading {
+    font-size: 2.5em;
+    line-height: 50px;
   }
 }

@@ -116,6 +116,7 @@
 @media (min-width: 768px) and (max-width: 1024px) {
  .t_container{
     height: 100%;
+    margin-bottom: 45%;
   }
 
   .alivia_text_container{
