@@ -14,8 +14,8 @@ export default function Home() {
       <HeroComponent />
       <AboutComponent />
       <ProjectComponent />
-      {/* <ExpertiseComponent />
-      <AwardsComponent />
+      <ExpertiseComponent />
+      {/* <AwardsComponent />
       <TesttimonialComponent />
       <MyJourneyComponent />
       <DiscussComponent />
