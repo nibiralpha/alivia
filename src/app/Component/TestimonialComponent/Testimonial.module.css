@@ -29,7 +29,7 @@
   justify-content: space-between;
 }
 
-.name{
+.name {
   margin-bottom: 8px;
 }
 
@@ -48,8 +48,8 @@
   font-size: 1.2em;
 }
 
-.position{
-   color: #777;
+.position {
+  color: #777;
 }
 
 .details {
@@ -70,11 +70,11 @@
   overflow: hidden;
 }
 
-.button_container{
+.button_container {
   display: flex;
 }
 
-.button{
+.button {
   width: 60px;
   height: 60px;
   background-color: #fff;
@@ -83,7 +83,7 @@
   margin-right: 10px;
 }
 
-.button img{
+.button img {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -92,50 +92,123 @@
   margin-right: 20px;
 }
 
-.main_image{
+.main_image {
   /* margin-right: 20px; */
 }
 
-.detals_section{
+.detals_section {
   display: flex;
   align-items: center;
   margin-left: 25%;
   margin-top: 10%;
 }
 
-.percentange{
+.percentange {
   font-size: 4.8em;
   font-weight: 600;
 }
 
-.client{
+.client {
   color: #777;
 }
 
-.satisfied{}
+.satisfied {
+}
 
-.detals{
+.detals {
   margin-left: 20px;
 }
 
-.box_area{
+.box_area {
   display: flex;
   flex-direction: row;
   padding-bottom: 50px;
 }
 
-.box{
+.box {
   display: flex;
   border: 1px solid #1a1a1a;
   width: 19.5%;
   align-items: center;
   justify-content: center;
-  margin: 0 .5% 0 .5%;
+  margin: 0 0.5% 0 0.5%;
   height: 230px;
 }
 
-.logo{
+.logo {
   /* display: flex;
   align-items: center;
   justify-content: center; */
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 430px) {
+  .testimonial_component {
+    padding: 30px 15px 0 15px;
+    margin-top: 0;
+  }
+
+  .right {
+    margin-left: 0%;
+  }
+
+  .heading {
+    font-size: 2em;
+    line-height: 35px;
+  }
+
+  .slide {
+    flex-direction: column;
+  }
+
+  .main_image {
+    width: 60%;
+  }
+
+  .contents {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  .details {
+    width: 100%;
+  }
+
+  .name_container {
+    margin-top: 40px;
+  }
+
+  .detals_section {
+    align-items: normal;
+    margin-left: 0;
+    flex-direction: column;
+  }
+
+  .detals {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .box {
+    width: 31%;
+    height: 120px;
+    margin: 1% 1%;
+  }
+
+  .box_area {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .box img {
+    width: 70%;
+    height: auto;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

@@ -58,7 +58,7 @@ export default function TestimonialComponent() {
                   elevated our brand’s overall digital presence and impact.
                 </div>
                 <div className={styles.name_area}>
-                  <div className="name_container">
+                  <div className={styles.name_container}>
                     <div className={styles.name}>Maria Gomez</div>
                     <div className={styles.position}>Designer at Flowless</div>
                   </div>
