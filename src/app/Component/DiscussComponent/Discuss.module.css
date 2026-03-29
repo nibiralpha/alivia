@@ -53,6 +53,38 @@
 }
 .right_img {
   z-index: 1;
-  transform: rotate(10deg) translateY(20px); 
-  margin-left: -120px; 
+  transform: rotate(10deg) translateY(20px);
+  margin-left: -120px;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 430px) {
+  .title {
+    font-size: 3em;
+    line-height: 50px;
+  }
+
+  .start_section {
+    margin: 0 30px;
+  }
+
+  .images img {
+    width: 125px;
+  }
+
+  .left_img {
+    transform: rotate(-7deg) translateY(10px);
+    margin-right: -60px;
+  }
+
+  .right_img {
+    transform: rotate(7deg) translateY(10px);
+    margin-left: -60px;
+  }
+
+  .center_img {
+    transform: scale(1);
+    z-index: 3;
+  }
 }

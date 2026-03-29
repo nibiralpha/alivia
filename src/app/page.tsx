@@ -18,8 +18,8 @@ export default function Home() {
       <AwardsComponent />
       <TesttimonialComponent />
       <MyJourneyComponent />
-      {/* <DiscussComponent /> */}
-      {/* <FooterComponent /> */}
+      <DiscussComponent />
+      <FooterComponent />
     </div>
   );
 }
