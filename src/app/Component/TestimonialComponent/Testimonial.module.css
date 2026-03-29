@@ -212,3 +212,41 @@
     justify-content: center;
   }
 }
+
+/* TAB */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .right{
+    margin-left: 0;
+  }
+
+  .slide{
+    flex-direction: column;
+  }
+
+  .main_image{
+    width: 30%;
+    margin-bottom: 65px;
+  }
+
+  .contents{
+    margin-left: 0;
+  }
+
+  .detals_section{
+    margin-left: 0;
+  }
+
+  .details{
+    width: 100%;
+  }
+
+  .logo{
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo img{
+    max-width: 60%;
+  }
+}
