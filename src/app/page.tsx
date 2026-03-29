@@ -17,9 +17,9 @@ export default function Home() {
       <ExpertiseComponent />
       <AwardsComponent />
       <TesttimonialComponent />
-      {/* <MyJourneyComponent />
-      <DiscussComponent />
-      <FooterComponent /> */}
+      <MyJourneyComponent />
+      {/* <DiscussComponent /> */}
+      {/* <FooterComponent /> */}
     </div>
   );
 }

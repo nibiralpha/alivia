@@ -13,7 +13,7 @@ export default function ProjectComponent() {
             <div className={styles.icon}>
               <img src="/images/play.svg" />
             </div>
-            <div className="detail">
+            <div className={styles.detail}>
               <div className="watch">Watch</div>
               <div className={styles.my_journey}>My Journey</div>
             </div>

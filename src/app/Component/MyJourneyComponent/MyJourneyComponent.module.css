@@ -30,6 +30,34 @@
   border: 1px solid #fff;
 }
 
-.my_journey{
-    font-size: 20px;
+.my_journey {
+  font-size: 20px;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 430px) {
+  .journey {
+    margin-top: 150px;
+    margin: 100px 0 0 0;
+  }
+
+  .play {
+    top: 40%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+  }
+
+  .play_container {
+    flex-direction: column;
+  }
+
+  .detail {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .icon {
+    margin-right: 0;
+  }
 }
