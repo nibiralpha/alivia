@@ -43,3 +43,23 @@
   font-size: 1.4rem;
   font-weight: bold;
 }
+
+/* MOBILE */
+
+@media screen and (max-width: 430px) {
+  .alivia {
+    font-size: 5em;
+  }
+
+  .footer {
+    margin: 0;
+  }
+
+  .copyright {
+    display: none;
+  }
+
+  .main{
+    bottom: 30%;
+  }
+}
