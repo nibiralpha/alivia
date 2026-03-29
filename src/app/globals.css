@@ -20,3 +20,11 @@ body {
   position: relative;
 }
 
+
+/* MOBILE */
+
+@media screen and (max-width: 430px) {
+  body{
+    padding: 0 !important;
+  }
+}

@@ -81,6 +81,28 @@
   align-items: baseline;
 }
 
-.right_side_img{
-    margin-bottom: 10px;
+.right_side_img {
+  margin-bottom: 10px;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 430px) {
+  .about_text_container {
+    display: none;
+    text-align: center;
+  }
+
+  .alivia_text_container {
+    display: inline-block;
+    align-items: normal;
+    text-align: center;
+    top: 60%;
+    bottom: 0;
+  }
+
+  .alivia_text {
+    font-size: 6em;
+    line-height: 1;
+  }
 }

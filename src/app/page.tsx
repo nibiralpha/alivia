@@ -12,14 +12,14 @@ export default function Home() {
   return (
     <div className="bg">
       <HeroComponent />
-      <AboutComponent />
+      {/* <AboutComponent />
       <ProjectComponent />
       <ExpertiseComponent />
       <AwardsComponent />
       <TesttimonialComponent />
       <MyJourneyComponent />
       <DiscussComponent />
-      <FooterComponent />
+      <FooterComponent /> */}
     </div>
   );
 }
