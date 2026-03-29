@@ -13,8 +13,8 @@ export default function Home() {
     <div className="bg">
       <HeroComponent />
       <AboutComponent />
-      {/* <ProjectComponent />
-      <ExpertiseComponent />
+      <ProjectComponent />
+      {/* <ExpertiseComponent />
       <AwardsComponent />
       <TesttimonialComponent />
       <MyJourneyComponent />
