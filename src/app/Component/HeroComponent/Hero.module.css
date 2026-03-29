@@ -110,3 +110,21 @@
     line-height: 1;
   }
 }
+
+/* TAB */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+ .t_container{
+    height: 100%;
+  }
+
+  .alivia_text_container{
+    white-space: nowrap;
+    bottom: 100px;
+  }
+  
+  .alivia_text{
+    font-size: 9em;
+  }
+}
+
