@@ -12,27 +12,24 @@ export default function AwardsComponent() {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      // Get all images
       const images = gsap.utils.toArray(`.${styles.images} img`);
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: componentRef.current,
           start: "top top",
-          end: "+=300%", // Duration of the scroll
+          end: "+=300%",
           scrub: true,
           pin: true,
           pinSpacing: true,
         },
       });
 
-      // Loop starts from the SECOND image (index 1)
       images.forEach((img, i) => {
         if (i > 0) {
           tl.to(img, {
-            opacity: 1, // Fade the next image IN over the previous one
+            opacity: 1, 
             ease: "none",
-            // This ensures each image stays visible for a bit before the next one starts
             duration: 1,
           });
         }
