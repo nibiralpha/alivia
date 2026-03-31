@@ -12,40 +12,27 @@ export default function ProjectComponent() {
   const componentRef = useRef(null);
   const galleryRef = useRef(null);
 
-  useLayoutEffect(() => {
+ useLayoutEffect(() => {
   let ctx = gsap.context(() => {
     const images = gsap.utils.toArray(`.${styles.image}`);
 
-    images.forEach((imgContainer, i) => {
-      const content = imgContainer.querySelector(`.${styles.image_content}`);
-
+    images.forEach((img, i) => {
       if (i < images.length - 1) {
-        ScrollTrigger.create({
-          trigger: imgContainer,
-          start: "top 10%",
-          endTrigger: galleryRef.current,
-          end: "bottom bottom",
-          pin: true,
-          pinSpacing: false,
-        });
-
-        gsap.to(content, {
-          scale: 0.6,
+        gsap.to(img, {
+          clipPath: "inset(0% 0% 100% 0%)",
           ease: "none",
-          transformOrigin: "top center", 
           scrollTrigger: {
-            trigger: imgContainer,
+            trigger: img,
             start: "top 10%",
-            end: "bottom top", 
+            end: "+=100%",
             scrub: true,
-          },
+            pin: true,
+            pinSpacing: false,
+          }
         });
       }
-      
-      gsap.set(imgContainer, { zIndex: i + 1 });
     });
   }, componentRef);
-
   return () => ctx.revert();
 }, []);
 
