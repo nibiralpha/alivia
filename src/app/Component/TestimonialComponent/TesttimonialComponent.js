@@ -1,14 +1,25 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./Testimonial.module.css";
 import SectionHeadingComponent from "../SectionHeadingComponent/SectionHeadingComponent";
-import Slider from "react-slick";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import Slider from "react-slick";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export default function TestimonialComponent() {
+  const headingTextRef = useRef(null);
+  const sliderRef = useRef(null);
+  const detailRef = useRef(null);
+  const boxRef = useRef(null);
+
   var settings = {
     dots: true,
     infinite: true,
@@ -16,7 +27,92 @@ export default function TestimonialComponent() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  
   useEffect(() => {
+    const headingText = headingTextRef.current;
+    const sliderContainer = sliderRef.current;
+    const detaliContainer = detailRef.current;
+    const boxContainer = boxRef.current;
+
+    // HEADING TEXT
+    gsap.fromTo(
+      headingText,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: headingText,
+          start: "top 98%",
+          toggleActions: "play none none none",
+        },
+      },
+    );
+    
+    // SLIDER
+    gsap.fromTo(
+      sliderContainer,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sliderContainer,
+          start: "top 98%",
+          toggleActions: "play none none none",
+        },
+      },
+    );
+    
+    // Details
+    gsap.fromTo(
+      detaliContainer,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: detaliContainer,
+          start: "top 98%",
+          toggleActions: "play none none none",
+        },
+      },
+    );
+    
+    // Box 
+    gsap.fromTo(
+      boxContainer,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: boxContainer,
+          start: "top 98%",
+          toggleActions: "play none none none",
+        },
+      },
+    );
     return () => {};
   }, []);
   return (
@@ -29,11 +125,11 @@ export default function TestimonialComponent() {
 
       <div className={styles.testimonial}>
         <div className={styles.right}>
-          <div className={styles.heading}>
+          <div ref={headingTextRef} className={styles.heading}>
             Our results speak volumes—discover what clients say about partnering
             with us.
           </div>
-          <div className="slider">
+          <div ref={sliderRef} className="slider">
             {/* <Slider {...settings}> */}
             <div className={styles.slide}>
               <div className="img">
@@ -85,7 +181,7 @@ export default function TestimonialComponent() {
             {/* </Slider> */}
           </div>
 
-          <div className={styles.detals_section}>
+          <div ref={detailRef} className={styles.detals_section}>
             <div className={styles.percentange}>96%</div>
             <div className={styles.detals}>
               <div className={styles.satisfied}>13k+ Satisfied Clients</div>
@@ -94,7 +190,7 @@ export default function TestimonialComponent() {
           </div>
         </div>
       </div>
-      <div className={styles.box_area}>
+      <div ref={boxRef} className={styles.box_area}>
         <div className={styles.box}>
           <div className={styles.logo}>
             <img src={"/images/client_logo_1.png"} />
