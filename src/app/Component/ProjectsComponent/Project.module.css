@@ -1,5 +1,5 @@
-.project_component{
-    margin-bottom: 20%;
+.project_component {
+  margin-bottom: 20%;
 }
 
 .gallary {
@@ -44,4 +44,51 @@
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 430px) {
+  .project_component {
+    padding: 0 20px 0 20px;
+  }
+
+  .year {
+    display: none;
+  }
+
+  .gallary {
+    display: inline;
+  }
+
+  .images {
+    width: 100%;
+  }
+
+  .explore {
+    text-align: center;
+    width: 100%;
+    margin-top: 100px;
+  }
+}
+
+/* TAB */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .year {
+    display: none;
+  }
+
+  .gallary {
+    display: inline;
+  }
+
+  .images {
+    width: 100%;
+  }
+
+  .explore{
+    width: 100%;
+    text-align: center;
+  }
 }
