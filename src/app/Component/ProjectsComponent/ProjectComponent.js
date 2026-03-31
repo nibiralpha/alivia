@@ -6,61 +6,45 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeadingComponent from "../SectionHeadingComponent/SectionHeadingComponent";
 import styles from "./Project.module.css";
 
-// Register the plugin
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ProjectComponent() {
   const componentRef = useRef(null);
   const galleryRef = useRef(null);
-  const firstImageRef = useRef(null);
-  const secondImageRef = useRef(null);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      // 1. The Pinning Logic
-      ScrollTrigger.create({
-        trigger: firstImageRef.current,
-        start: "top 10%",
-        endTrigger: galleryRef.current,
-        end: "bottom bottom",
-        pin: true,
-        pinSpacing: false,
-      });
+      const images = gsap.utils.toArray(`.${styles.image}`);
 
-      // 2. The Scale Down Logic
-      // Animates the image from its original size to 70% width/height
-      gsap.to(firstImageRef.current.querySelector(`.${styles.img}`), {
-        scale: 0.6, // Adjust this number to determine how small it gets
-        ease: "none",
-        scrollTrigger: {
-          trigger: firstImageRef.current,
-          start: "top 10%", // Starts scaling when pinning begins
-          end: "top -50%", // Finishes scaling after scrolling a bit
-          scrub: true, // Smoothly follows the scrollbar
-        },
-      });
+      images.forEach((imgContainer, i) => {
+        if (i < images.length - 1) {
+          // Pin the container
+          ScrollTrigger.create({
+            trigger: imgContainer,
+            start: "top 10%",
+            endTrigger: galleryRef.current,
+            end: "bottom bottom",
+            pin: true,
+            pinSpacing: false,
+          });
 
-      // 3. The Pinning Logic
-      ScrollTrigger.create({
-        trigger: secondImageRef.current,
-        start: "top 25%",
-        endTrigger: galleryRef.current,
-        end: "bottom -50%",
-        pin: true,
-        pinSpacing: false,
-      });
+          // 2. Scale the Content
+          gsap.to(imgContainer.children, {
+            scale: 0.6,
+            // opacity: 0.8,
+            transformOrigin: "top center",
+            ease: "none",
+            scrollTrigger: {
+              trigger: imgContainer,
+              start: "top 10%",
+              end: "bottom top",
+              scrub: true,
+            },
+          });
+        }
 
-      // 4. The Scale Down Logic
-      // Animates the image from its original size to 70% width/height
-      gsap.to(secondImageRef.current.querySelector(`.${styles.img}`), {
-        scale: 0.7, // Adjust this number to determine how small it gets
-        ease: "none",
-        scrollTrigger: {
-          trigger: secondImageRef.current,
-          start: "top 25%", // Starts scaling when pinning begins
-          end: "top -50%", // Finishes scaling after scrolling a bit
-          scrub: true, // Smoothly follows the scrollbar
-        },
+        // fix z-index Stacking
+        gsap.set(imgContainer, { zIndex: i + 1 });
       });
     }, componentRef);
 
@@ -79,8 +63,8 @@ export default function ProjectComponent() {
       <div ref={galleryRef} className={styles.gallary}>
         <div className={styles.year}>(19-25)</div>
         <div className={styles.images}>
-          {/* First image with the Ref for pinning */}
-          <div ref={firstImageRef} className={styles.image} id="img1">
+          {/* Project 1 */}
+          <div className={styles.image}>
             <img
               className={styles.img}
               src="/images/project_main_image.webp"
@@ -92,7 +76,8 @@ export default function ProjectComponent() {
             </div>
           </div>
 
-          <div ref={secondImageRef} className={styles.image} id="img2">
+          {/* Project 2 */}
+          <div className={styles.image}>
             <img
               className={styles.img}
               src="/images/project_main_image2.webp"
@@ -104,7 +89,8 @@ export default function ProjectComponent() {
             </div>
           </div>
 
-          <div className={styles.image} id="img3">
+          {/* Project 3 */}
+          <div className={styles.image}>
             <img
               className={styles.img}
               src="/images/project_main_image3.webp"
@@ -116,6 +102,7 @@ export default function ProjectComponent() {
             </div>
           </div>
 
+          {/* Project 4  */}
           <div className={styles.image}>
             <img
               className={styles.img}
