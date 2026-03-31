@@ -13,43 +13,41 @@ export default function ProjectComponent() {
   const galleryRef = useRef(null);
 
   useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      const images = gsap.utils.toArray(`.${styles.image}`);
+  let ctx = gsap.context(() => {
+    const images = gsap.utils.toArray(`.${styles.image}`);
 
-      images.forEach((imgContainer, i) => {
-        if (i < images.length - 1) {
-          // Pin the container
-          ScrollTrigger.create({
+    images.forEach((imgContainer, i) => {
+      const content = imgContainer.querySelector(`.${styles.image_content}`);
+
+      if (i < images.length - 1) {
+        ScrollTrigger.create({
+          trigger: imgContainer,
+          start: "top 10%",
+          endTrigger: galleryRef.current,
+          end: "bottom bottom",
+          pin: true,
+          pinSpacing: false,
+        });
+
+        gsap.to(content, {
+          scale: 0.6,
+          ease: "none",
+          transformOrigin: "top center", 
+          scrollTrigger: {
             trigger: imgContainer,
             start: "top 10%",
-            endTrigger: galleryRef.current,
-            end: "bottom bottom",
-            pin: true,
-            pinSpacing: false,
-          });
+            end: "bottom top", 
+            scrub: true,
+          },
+        });
+      }
+      
+      gsap.set(imgContainer, { zIndex: i + 1 });
+    });
+  }, componentRef);
 
-          // 2. Scale the Content
-          gsap.to(imgContainer.children, {
-            scale: 0.6,
-            // opacity: 0.8,
-            transformOrigin: "top center",
-            ease: "none",
-            scrollTrigger: {
-              trigger: imgContainer,
-              start: "top 10%",
-              end: "bottom top",
-              scrub: true,
-            },
-          });
-        }
-
-        // fix z-index Stacking
-        gsap.set(imgContainer, { zIndex: i + 1 });
-      });
-    }, componentRef);
-
-    return () => ctx.revert();
-  }, []);
+  return () => ctx.revert();
+}, []);
 
   return (
     <div ref={componentRef} className={styles.project_component}>
