@@ -41,7 +41,7 @@ export default function ProjectComponent() {
             trigger: containerRef.current,
             start: "top 80%",
             end: "bottom 20%",
-            scrub: 1,
+            scrub: .3,
           },
         });
 
