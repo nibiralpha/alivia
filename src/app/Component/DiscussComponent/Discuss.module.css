@@ -44,8 +44,8 @@
 
 .left_img {
   z-index: 1;
-  transform: rotate(-10deg) translateY(20px);
-  margin-right: -120px;
+  transform: rotate(-2deg) translateY(20px);
+  margin-right: -180px;
 }
 .center_img {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
@@ -53,8 +53,8 @@
 }
 .right_img {
   z-index: 1;
-  transform: rotate(10deg) translateY(20px);
-  margin-left: -120px;
+  transform: rotate(2deg) translateY(20px);
+  margin-left: -180px;
 }
 
 /* MOBILE */
