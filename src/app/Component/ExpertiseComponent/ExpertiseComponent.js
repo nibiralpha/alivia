@@ -1,7 +1,35 @@
+"use client"
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 import SectionHeadingComponent from "../SectionHeadingComponent/SectionHeadingComponent";
 import styles from "./Expertise.module.css";
 
 export default function ExpertiseComponent() {
+  const headingRef = useRef(null);
+
+  useEffect(() => {
+    const el = headingRef.current;
+
+    gsap.fromTo(
+      el,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 98%",
+          toggleActions: "play none none none",
+        },
+      },
+    );
+  }, []);
   return (
     <div className={styles.expertise_component}>
       <SectionHeadingComponent
@@ -13,7 +41,7 @@ export default function ExpertiseComponent() {
 
       <div className={styles.expertise}>
         <div className={styles.right}>
-          <div className={styles.heading}>
+          <div ref={headingRef} className={styles.heading}>
             Professional services I offer to help you achieve meaningful and
             lasting results
           </div>
