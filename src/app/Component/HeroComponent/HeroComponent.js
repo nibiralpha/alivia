@@ -89,7 +89,7 @@ export default function HeroComponent() {
         "-=0.6",
       );
 
-    return () => tl.kill(); // Cleanup
+    return () => tl.kill();
   }, []);
 
   const splitText = (text) => {
@@ -133,19 +133,16 @@ export default function HeroComponent() {
           </div>
 
           <div className={styles.alivia_text_container}>
-            {/* Masked "Hi, I am" */}
             <div className={styles.text_mask}>
               <div ref={hiRef} className={styles.alivia_left_text_anim}>
                 Hi, I am
               </div>
             </div>
 
-            {/* Split "Alivia" */}
             <div ref={aliviaRef} className={styles.alivia_text_main}>
               {splitText("Alivia")}
             </div>
 
-            {/* Masked "Daiana" */}
             <div className={styles.text_mask}>
               <div ref={daianaRef} className={styles.alivia_right_text_anim}>
                 Daiana
